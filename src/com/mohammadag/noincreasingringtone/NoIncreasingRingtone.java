@@ -28,7 +28,7 @@ public class NoIncreasingRingtone implements IXposedHookZygoteInit, IXposedHookL
     			
     			// SecPhone does a call to AudioManager.setStreamVolume(AudioManager.STREAM_RING, 1, null);
     			// and 1-2 seconds later, does the same call with the original volume level set by the user
-    			// We can ignore the first call to disable increasing ringtone, but we shouldn't ignore subsequent call
+    			// We can ignore the first call to disable increasing ringtone, but we shouldn't ignore subsequent calls
     			// as the user could have the "Increase volume in pocket" option enabled, which overrides user-set volume
     			// level.
     			if (streamType == AudioManager.STREAM_RING && index == 1 && flags == 0 && listener.isRinging) {
