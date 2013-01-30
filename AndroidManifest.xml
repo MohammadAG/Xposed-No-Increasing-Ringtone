@@ -6,6 +6,8 @@
     <uses-sdk
         android:minSdkVersion="16"
         android:targetSdkVersion="16" />
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> 
 
     <application
         android:allowBackup="true"
@@ -17,7 +19,11 @@
         <meta-data android:value="2.0*" android:name="xposedminversion"/>
         <meta-data android:value="Disallows changing stream volume to stop increasing ringtone." android:name="xposeddescription"/>
         
-
+        <receiver android:name=".PhoneStateListener">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
     </application>
-
+    
 </manifest>
