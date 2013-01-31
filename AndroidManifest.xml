@@ -17,7 +17,7 @@
         
         <meta-data android:value="true" android:name="xposedmodule"/>
         <meta-data android:value="2.0*" android:name="xposedminversion"/>
-        <meta-data android:value="Disallows changing stream volume to stop increasing ringtone." android:name="xposeddescription"/>
+        <meta-data android:value="Disables increasing ringtone when phone rings" android:name="xposeddescription"/>
         
         <receiver android:name=".PhoneStateListener">
             <intent-filter>
