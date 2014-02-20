@@ -18,12 +18,6 @@
         <meta-data android:value="true" android:name="xposedmodule"/>
         <meta-data android:value="2.0*" android:name="xposedminversion"/>
         <meta-data android:value="Disables increasing ringtone when phone rings" android:name="xposeddescription"/>
-        
-        <receiver android:name=".PhoneStateListener">
-            <intent-filter>
-                <action android:name="android.intent.action.PHONE_STATE"/>
-            </intent-filter>
-        </receiver>
     </application>
     
 </manifest>
